@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url('./img/horizontal-banner-with-cosmetic-product-coconut.jpg'); /* Cambia 'hero-image.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    height: 300px;
+    width: 100%;
+    border: solid red;
+}
+
+.hero-slogan {
+    width: 60%;
+    border: solid red;
+}
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    border: 1px solid white;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+/* Best Sellers Section */
+.best-sellers {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Filter Section */
+.filter {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}
