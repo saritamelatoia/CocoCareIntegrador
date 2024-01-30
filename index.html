@@ -5,73 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200&display=swap');
+    </style>
+
 </head>
 <body>
-
+<header>
 <!-- Hero Section with Navigation Bar -->
 <div class="hero">
-    <nav class="navbar">
-        <div class="logo">Logo</div>
-        <ul class="nav-links">
+    <class="navbar">
+        <div class="logo">Coco Beauty</div>
+        <ul class="navv-links">
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="./sections/aboutus.html">Sobre nosotros</a></li>
+            <li><a href="./sections/contactus.html">Contacto</a></li>
         </ul>
-    </nav>
-    <div class="hero-slogan">
-        <h1>Bienvenido a Tu Tienda en Línea</h1>
-    </div>
+
+<!-- Toggle menu / carrito -->
+<div class="menu-btn">
+    <i class="fa-solid fa-bars"></i>
 </div>
 
-<!-- Best Sellers Section -->
-<section class="best-sellers">
-    <h2>Best Sellers</h2>
-    <div class="cards-container">
-        <div class="card"> <!-- Card 1 -->
-            <img src="product1.jpg" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <p>Descripción del Producto 1.</p>
-        </div>
-        <div class="card"> <!-- Card 2 -->
-            <img src="product2.jpg" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <p>Descripción del Producto 2.</p>
-        </div>
-        <div class="card"> <!-- Card 3 -->
-            <img src="product3.jpg" alt="Producto 3">
-            <h3>Producto 3</h3>
-            <p>Descripción del Producto 3.</p>
-        </div>
-        <div class="card"> <!-- Card 4 -->
-            <img src="product4.jpg" alt="Producto 4">
-            <h3>Producto 4</h3>
-            <p>Descripción del Producto 4.</p>
-        </div>
-    </div>
+</div>
 
-</section>
+    </nav>
+    <div class="hero-slogan">
+        <h1>Sumérgete en la frescura tropical con Coco Beauty</h1>
+        <p>Despierta tu luminosidad interior y el encanto de una belleza auténtica y saludable.</p>
+    </div>
+</div>
+</header>
 
-<!-- Filter Section -->
-<section class="filter">
-    <h2>Filtros</h2>
-    <div class="card"> <!-- Filter Card 1 -->
-        <img src="filter1.jpg" alt="Filtro 1">
-        <h3>Filtro 1</h3>
+<section class="productos">
+    <h2 class="productos-titulo">Productos</h2>
+    
+    <div id="categories-container">
+        <button class="category active">Todos los productos</button>
+        <button class="category"
+        data-category="bathsalt">Salt bath</button>
+        <button class="category"
+        data-category="serum">Serums</button>
+        <button class="category"
+        data-category="milkbath">Milk bath</button>
+        <button class="category"
+        data-category="scrubs">Scrubs</button>
     </div>
-    <div class="card"> <!-- Filter Card 2 -->
-        <img src="filter2.jpg" alt="Filtro 2">
-        <h3>Filtro 2</h3>
-    </div>
-    <div class="card"> <!-- Filter Card 3 -->
-        <img src="filter3.jpg" alt="Filtro 3">
-        <h3>Filtro 3</h3>
-    </div>
-</section>
+        <div class="cards-container" id="product-container">
+
+
+        </div>
+        <button class="back-load-button"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <button class="next-load-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </section>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2024 Tu Tienda en Línea. Todos los derechos reservados.</p>
+    <div class="contact-info">
+        <p>Contacto: <a href="mailto:info@tusitio.com">info@cocobeauty.com</a> | Teléfono: (123) 456-7890</p>
+    </div>
+
+
+    <div class="social-media">
+        <p>Síguenos en:</p>
+            <a href="https://www.facebook.com/tusitio" target="_blank" rel="noopener noreferrer">Facebook <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/tusitio" target="_blank" rel="noopener noreferrer">X <i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.instagram.com/tusitio" target="_blank" rel="noopener noreferrer">Instagram <i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+    <div class="legal-info">
+            <a href="/politica-de-privacidad">Política de privacidad</a> | 
+            <a href="/terminos-y-condiciones">Términos y condiciones</a>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2024 Coco Beauty</p>
+    </div>
+
+    <div class="site-map">
+        <p><a href="/mapa-del-sitio">Mapa del sitio</a></p>
+    </div>
+
+    <div class="map-image">
+        <!-- Foto del mapa (sustituye con tu imagen y ajusta estilos según sea necesario) -->
+        <img src="./img/ubi" alt="Mapa del Sitio">
+    </div>
 </footer>
 
+<script src="products.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
