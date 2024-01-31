@@ -7,9 +7,10 @@ const backLoadButton = document.querySelector('.back-load-button');
 const categoriesContainer = document.getElementById("categories-container");
 //HTML categorias
 const categoriesFilters = document.querySelectorAll(".category");
-// Toggle buttons
-
-
+// Cart
+const cartNumberElement = document.getElementById('cart-number');
+// Boton que dirija al carrito
+const cartButton = document.getElementById('go-to-cart-button');
 
 
 // Funcion crear HTML del producto
@@ -29,7 +30,6 @@ const renderProducts = (productList) => {
     productContainer.innerHTML = productList.map(cardTemplate).join(""); 
 };
 
-console.log(renderProducts);
 
 // Función para pasar a la siguiente página de productos
 const nextProductsPage = () => {
@@ -76,8 +76,6 @@ if (appState.activeFilter === "todos") {
 };
 
 
-
-
     // Función para ocultar botones al filtrar
 const hidePaginationButtons = () => {
     if (appState.activeFilter !== "todos") {
@@ -96,7 +94,7 @@ const renderFilteredProducts = () => {
         (product) => product.category === appState.
         activeFilter
     );
-    console.log("Filtered Products:", filteredProducts);
+
 renderProducts(filteredProducts);
 };
 
@@ -126,8 +124,47 @@ const inactiveFilterBtn = (element) => {
     );
 };
 
+/* ------------------------------------CARRITO -------------------------------------------------*/
+
+// Agregar al carrito
+const addToCart = (product) => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartNumber();
+};
+
+// Función para actualizar el número del carrito en el navbar
+const updateCartNumber = () => {
+    const cartNumberElement = document.getElementById('cart-number');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartNumber = cart.length;
+
+    cartNumberElement.textContent = cartNumber;
+
+    setTimeout(() => {
+        const bodyWidth = document.body.offsetWidth;
+    }, 0);
+};
+
+// Actualizar iconito
+
+const actualizarIcono = (e) => {
+    if (e.target.classList.contains('add-to-cart')) {
+        const productId = e.target.dataset.productId;
+        const selectedProduct = appState.products[appState.currentProductsIndex].find(product => product.id === productId);
+        if (selectedProduct) {
+            addToCart(selectedProduct);
+        }
+    }
+};
+
+// Boton carrito que dirija al carrito
 
 
+const clickCart = () => {
+    window.location.href = 'cart.html';
+};
 
 
 //Función init
@@ -136,7 +173,10 @@ renderProducts(appState.products[0]);
 nextLoadButton.addEventListener("click", nextProductsPage);
 backLoadButton.addEventListener("click", backProductsPage);
 categoriesContainer.addEventListener("click", applyFilter);
+document.addEventListener('click', actualizarIcono);
+cartButton.addEventListener('click', clickCart);
 
+updateCartNumber();
 };
 
 
