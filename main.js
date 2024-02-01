@@ -39,6 +39,7 @@ const nextProductsPage = () => {
     }
 };
 
+// Función para volver atrás (paginación)
 const backProductsPage = () => {
     if (appState.currentProductsIndex > 0) {
         appState.currentProductsIndex -= 1;
@@ -47,7 +48,7 @@ const backProductsPage = () => {
 };
 
 
-// FILTROS BOTONESSSSS
+/* -------------- FILTROS BOTONESSSSS ---------------- */
 
 
 const changeBtnActiveState = (selectedCategory) => {

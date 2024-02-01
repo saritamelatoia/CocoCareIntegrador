@@ -25,21 +25,21 @@ const renderCartProducts = () => {
 };
 
 
-// Función para eliminar un producto del carrito
+/* ------------- Función para eliminar un producto del carrito ------------*/
 const removeFromCart = (e) => {
     const productId = e.target.dataset.productId;
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Debugging: Log el estado actual del carrito antes de la eliminación
+    // Estado actual del carrito pre eliminar
     console.log('Cart before removal:', cart);
 
-    // Filtrar el carrito para eliminar el producto con el ID correspondiente
+    // Filtrar carrito p eliminar el producto por ID 
     cart = cart.filter(product => product.id !== productId);
 
-    // Debugging: Log el estado actualizado del carrito después de la eliminación
+    // Estado actualizado del carrito post eliminación
     console.log('Cart after removal:', cart);
 
-    // Guardar el carrito actualizado en el localStorage
+    // Guardar carrito actualizado en el localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 
     // Renderizar de nuevo los productos en el carrito
@@ -48,5 +48,5 @@ const removeFromCart = (e) => {
 
 
 
-// Llamar a la función para renderizar el carrito cuando la página cargue
+// Renderizar carrito al cargar pagina
 document.addEventListener('DOMContentLoaded', renderCartProducts);
