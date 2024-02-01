@@ -5,15 +5,19 @@
 }
 
 body {
-    --text: #fffbf8;
-    --background: #70461b;
-    --decorations: #e91e63;
+    font-family: 'Roboto Flex', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--decorations);
 }
+
+:root {
+    --text: #ffffff;  
+    --background: #80d0ffb2;  
+    --decorations: #ffdcfa;  
+    --black: #000000;
+}
+
 
 /* About us */
 
@@ -25,17 +29,21 @@ body {
 }
 
 h1, h2 {
-    color: var(--text);
+    color: var(--black);
 }
 
 a.back-button {
-    display: inline-block;
+    background-color: var(--black); 
+    color: #fff; 
     padding: 10px 20px;
-    background-color: var(--decorations);
-    color: var(--text);
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
-    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.back-button:hover {
+    background-color: #c2185b; 
 }
 
 @media (max-width: 768px) {
@@ -79,14 +87,16 @@ input, textarea {
 }
 
 button {
-    background-color: var(--decorations); /* Rosa */
-    color: #fff; /* Texto blanco */
+    background-color: var(--black); 
+    color: #fff; 
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #c2185b; /* Rosa más oscuro al pasar el ratón */
+    background-color: #c2185b; 
 }
