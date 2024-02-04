@@ -34,4 +34,3 @@ const appState = {
     activeFilter: null, 
 }
 
-console.log(appState);

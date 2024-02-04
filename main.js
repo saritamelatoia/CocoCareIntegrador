@@ -10,8 +10,10 @@ const categoriesFilters = document.querySelectorAll(".category");
 // Cart
 const cartNumberElement = document.getElementById('cart-number');
 // Boton que dirija al carrito
-const cartButton = document.getElementById('go-to-cart-button');
-
+const cartButton = document.getElementById("go-to-cart-button");
+// Toggle Menú
+const toggleMenuBtn = document.getElementById("icon");
+const toggleMenuDisplay = document.getElementById("menu-container");
 
 // Funcion crear HTML del producto
 const cardTemplate = (product) => {
@@ -161,11 +163,14 @@ const actualizarIcono = (e) => {
 };
 
 // Boton carrito que dirija al carrito
-
-
 const clickCart = () => {
     window.location.href = 'cart.html';
 };
+
+// Toggle Menú
+const toggleMenu = () => {
+    toggleMenuDisplay.classList.toggle('show');
+}
 
 
 //Función init
@@ -176,6 +181,7 @@ backLoadButton.addEventListener("click", backProductsPage);
 categoriesContainer.addEventListener("click", applyFilter);
 document.addEventListener('click', actualizarIcono);
 cartButton.addEventListener('click', clickCart);
+toggleMenuBtn.addEventListener('click', toggleMenu);
 
 updateCartNumber();
 };

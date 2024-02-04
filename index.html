@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Landing Page</title>
+    <title>Coco Beauty</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -17,10 +17,13 @@
     <nav>
     <div class="navbar">
         <div class="logo">Coco Beauty</div>
-        <ul class="navv-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="./sections/aboutus.html">Sobre nosotros</a></li>
-            <li><a href="./sections/contactus.html">Contacto</a></li>
+
+        <div id="menu-container">
+        <ul>
+            <li><a class="active" href="#">Inicio</a></li>
+            <li><a class="active" href="./sections/aboutus.html">Sobre nosotros</a></li>
+            <li><a class="active" href="./sections/contactus.html">Contacto</a></li>
+        </ul>
             <div class="cart-icon-container">
                 <button id="go-to-cart-button">
                 <div class="cart-icon">
@@ -29,12 +32,12 @@
                 <div class="cart-number" id="cart-number">0</div>
             </button>
             </div>
-            
-        </ul>
+    </div>
+        <div id="icon">
+            <i class="fas fa-bars"></i>
+        </div>
     </div>
     </nav>
-<!-- Toggle menu / carrito -->
-
 
 
     <div class="hero-slogan">
