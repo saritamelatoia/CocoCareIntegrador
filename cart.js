@@ -7,7 +7,9 @@ const renderCartProducts = () => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Limpiar carrito
-    cartContainer.innerHTML = '';
+    if (cartContainer!=null) {
+        cartContainer.innerHTML = '';
+    }
 
     // Renderizar cada producto
     cart.forEach(product => {
@@ -30,8 +32,6 @@ const removeFromCart = (e) => {
     const productId = e.target.dataset.productId;
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Estado actual del carrito pre eliminar
-    console.log('Cart before removal:', cart);
 
     // Filtrar carrito p eliminar el producto por ID 
     cart = cart.filter(product => product.id !== productId);
