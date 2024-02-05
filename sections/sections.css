@@ -4,18 +4,19 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Roboto Flex', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--decorations);
+    background-color:var(--background);
 }
 
 :root {
-    --text: #ffffff;  
-    --background: #80d0ffb2;  
-    --decorations: #ffdcfa;  
-    --black: #000000;
+    --text: #333333;  
+    --background: #FBF3EC ;  
+    --buttons: #ABC78F;  
+    --details: #FF8494;
 }
 
 
@@ -29,21 +30,24 @@ body {
 }
 
 h1, h2 {
-    color: var(--black);
+    color: var(--details);
 }
 
 a.back-button {
-    background-color: var(--black); 
-    color: #fff; 
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: var(--buttons); 
+    color: var(--text); 
+    padding: 5px 9px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 14px; 
     text-decoration: none;
+    cursor: pointer;
+    margin: 7px;
 }
 
 a.back-button:hover {
-    background-color: #c2185b; 
+    color:var(--text);
+    background-color: var(--details); 
 }
 
 @media (max-width: 768px) {
@@ -57,7 +61,7 @@ a.back-button:hover {
 
 header {
     background-color: var(--decorations); 
-    color: #fff; 
+    color: var(--text); 
     padding: 20px;
     text-align: center;
 }
@@ -82,21 +86,24 @@ input, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid var(--decorations); 
+    border: 1px solid var(--details); 
     border-radius: 5px;
 }
 
 button {
-    background-color: var(--black); 
-    color: #fff; 
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    background-color: var(--buttons); 
+    color: var(--text); 
+    padding: 5px 9px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    text-decoration: none;
     cursor: pointer;
-    font-family: 'Roboto Flex', sans-serif;
-    font-size: 16px;
+    margin: 7px;
+    
 }
 
 button:hover {
-    background-color: #c2185b; 
+    color:var(--text);
+    background-color: var(--details); 
 }
