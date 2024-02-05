@@ -1,5 +1,5 @@
 const productsData = [
-    { category: "scrubs", name: "Watermelon Sugar Scrub", description: "Descripción del Producto 1", image: "./img/producto1.jpg", price: "$45", id: "1"},
+    { category: "scrubs", name: "Watermelon Scrub", description: "Descripción del Producto 1", image: "./img/producto1.jpg", price: "$45", id: "1"},
     { category: "bathsalt", name: "Hibiscus Bath Soak", description: "Descripción del Producto 2", image: "./img/producto2.jpg", price: "$45", id: "2"},
     { category: "serum", name: "Botanic Serum", description: "Descripción del Producto 3", image: "./img/producto3.jpg", price: "$45", id: "3"},
     { category: "scrubs", name: "Mermaid Body Glow", description: "Descripción del Producto 1", image: "./img/producto4.jpg", price: "$45", id: "1"},

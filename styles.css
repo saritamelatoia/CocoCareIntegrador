@@ -7,10 +7,10 @@
 }
 
 :root {
-    --text: #ffffff;  
-    --background: #80d0ffb2;  
-    --decorations: #ffdcfa;  
-    --black: #000000;
+    --text: #333333;  
+    --background: #FBF3EC ;  
+    --buttons: #ABC78F;  
+    --details: #FF8494;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 /* Hero Section */
 
 .headerSection {
-    background-color: #000000;
+    background-color: var(--background);
     display: flex;
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@ body {
     padding: 10px 15px;
     align-items: center;
     justify-content: space-around;
-    color: #ffffff;
+    color: var(--text);
     height: 80px;
 }
 
@@ -48,9 +48,8 @@ body {
     width: 100%;
     background-image: url('./img/horizontal-banner-with-cosmetic-product-coconut.jpg');
     background-position: center;
-    color: var(--text);
+    color: var(--background);
     text-align: center;
-    color: var(--text);
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -61,9 +60,7 @@ body {
 
 .hero-slogan h1 {
     font-weight: bold;
-
 }
-
 
 
 /* Navbar */
@@ -80,13 +77,13 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: rgb(223, 131, 146);
+    color: var(--details);
     font-weight: bolder;
     transition: 0.1s;
 }
 
 nav a {
-    color: var(--text);
+    color: var(--details);
     font-size: 17px;
 }
 
@@ -100,9 +97,9 @@ nav a {
     cursor: pointer;
 }
 #icon:active{
- 	transform: translatey(1px);
+transform: translatey(1px);
 }
- 
+
 
 @media (max-width:700px) {
     .headerSection {
@@ -120,7 +117,7 @@ nav a {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(255, 192, 203, 0.856);
+        background-color: var(--background);
         animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 
@@ -144,7 +141,7 @@ nav a {
 
     .navbar ul a {
         font-size: 2rem;
-        color: #000000;
+        color: var(--text);
         font-weight: bold;
     }
 }
@@ -169,8 +166,8 @@ nav a {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: var(--background);
-    color: white;
+    background-color: var(--details);
+    color: var(--text);
     border-radius: 50%;
     padding: 4px;
     font-size: 12px;
@@ -227,7 +224,7 @@ margin-top: 50px;
 }
 
 .active:hover{
-    color: rgb(142, 166, 194);
+    color: var(--text);
 }
 
 /* Estilos generales para la tarjeta */
@@ -235,7 +232,7 @@ margin-top: 50px;
 .cards-container {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-around; 
+    justify-content:center; 
 } 
 
 .card {
@@ -243,11 +240,11 @@ margin-top: 50px;
     flex-direction: column;
     width: 200px; 
     padding: 10px; 
-    border: 1px solid #fff; 
+    border: 1px solid var(--details); 
     border-radius: 8px; 
     margin: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    background-color: #fff;
+    box-shadow: 0 4px 8px var(--buttons); 
+    background-color: var(--background);
     align-items: center
 }
 
@@ -256,26 +253,32 @@ margin-top: 50px;
     width: 100%; 
     height: auto; 
     object-fit: cover; 
- }
+}
 
   /* Estilos para el título del producto */
+.productos-titulo {
+    margin: 20px;
+    background-color: var(--details);
+    color: var(--text);
+}
+
 .product-title {
     font-size: 16px; 
-    margin: 8px 0; 
+    margin: 11px; 
 }
 
 .product-price {
     font-size: 14px; 
-    color: var(--black);
+    color: var(--text);
     margin-bottom: 8px; 
 }
 
 
   /* Estilos para el botón "Agregar al Carrito" */
 button {
-    background-color: var(--black); 
-    color: #fff; 
-    padding: 8px 12px; 
+    background-color: var(--buttons); 
+    color: var(--text); 
+    padding: 5px 9px; 
     border: none; 
     border-radius: 4px; 
     font-size: 14px; 
@@ -284,15 +287,12 @@ button {
 }
 
 button:hover {
-    color: rgb(255, 255, 255);
-    background-color: #000000; 
+    color:var(--text);
+    background-color: var(--details); 
 }
 
 .productos {
-
     text-align: center; 
-
-
     align-items: center; 
 }
 
@@ -300,14 +300,14 @@ button:hover {
     /* Agrega estilos al botón */
     margin-top: 10px; 
     margin-bottom: 2px;
-    background-color: var(--decorations);
-    color: var(--black);
+    background-color: var(--buttons);
+    color: var(--text);
 }
 
 .back-load-button {
     margin-bottom: 20px;
-    background-color: var(--decorations);
-    color: var(--black);
+    background-color: var(--buttons);
+    color: var(--text);
 }
 
 .next-load-button:hover{
@@ -324,7 +324,7 @@ button:hover {
 
 
 
-/* Media query para pantallas más estrechas (ajusta según tus necesidades) */
+/* Media query para pantallas más estrechas */
 @media screen and (max-width: 600px) {
     .cards-container {
     flex-direction: column;
