@@ -23,7 +23,7 @@ const cardTemplate = (product) => {
     <div class="card">
         <img src="${product.image}" alt="${product.title}" class="product-image">
         <h2 class="product-title">${product.name}</h2>
-        <p class="product-price">${product.price}</p>
+        <p class="product-price">$${product.price}</p>
         <button class="add-to-cart" data-product-id="${product.id}">Agregar al Carrito</button>
     </div>
     `;
