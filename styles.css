@@ -154,7 +154,7 @@ transform: translatey(1px);
 }
 
 
-/* -------------------------- CARRITO ---------------------------*/
+/* ----------------------Carrito en navbar---------------------------*/
 .cart-icon-container {
     position: relative;
     cursor: pointer;
@@ -273,7 +273,7 @@ transform: translatey(1px);
 }
 
 
-  /* Estilos para el botón "Agregar al Carrito" */
+  /* Estilos para el botón "Agregar al Carrito" en cards */
 button {
     background-color: var(--buttons); 
     color: var(--text); 
@@ -369,7 +369,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border: solid 2px;
 
 }
 
