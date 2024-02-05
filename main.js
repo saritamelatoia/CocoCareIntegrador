@@ -168,8 +168,11 @@ const clickCart = () => {
 };
 
 // Toggle Menú
-const toggleMenu = () => {
-    toggleMenuDisplay.classList.toggle('show');
+const toggleMenu = (e) => {
+    const nav = document.querySelector('.navbar')
+
+    nav.classList.toggle('show');
+
 }
 
 
