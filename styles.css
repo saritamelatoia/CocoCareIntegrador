@@ -100,6 +100,9 @@ nav a {
 transform: translatey(1px);
 }
 
+.logo{
+    font-size: 35px;
+}
 
 @media (max-width:700px) {
     .headerSection {
@@ -196,10 +199,6 @@ transform: translatey(1px);
 
 }
 
-/*Productos section */
-.productos{
-margin-top: 50px;
-}
 
 /* Filter Section */
 
@@ -258,7 +257,7 @@ margin-top: 50px;
   /* Estilos para el título del producto */
 .productos-titulo {
     margin: 20px;
-    background-color: var(--details);
+    background-color: var(--background);
     color: var(--text);
 }
 
@@ -284,6 +283,7 @@ button {
     font-size: 14px; 
     text-decoration: none;
     cursor: pointer;
+    margin: 7px;
 }
 
 button:hover {
@@ -344,15 +344,23 @@ button:hover {
     }
 
     .card {
-        width: calc(50% - 20px);
+        margin-top: 40px;
+        width: 40%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .card {
-        width: 100%;
+        width: 50%;
+        padding: 20px;
+        margin-top: 40px;
     }
-}
+
+    button{
+        margin: 5px;
+    }
+    }
+
 
 
 /* Carrito */

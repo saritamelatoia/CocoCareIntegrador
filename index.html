@@ -9,7 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200&display=swap');
     </style>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
 
@@ -37,7 +37,6 @@
                 <i class="fas fa-bars"></i>
             </div>
     
-    
         </span>
     
     </header>
@@ -47,12 +46,11 @@
         <p>Despierta tu luminosidad interior y el encanto de una belleza auténtica y saludable.</p>
     </div>
 
-
 </header>
+
 
 <section class="productos">
     <h2 class="productos-titulo">Productos</h2>
-    
     <div id="categories-container">
         <button class="category active">Todos los productos</button>
         <button class="category"
@@ -66,6 +64,7 @@
     </div>
         <div class="cards-container" id="product-container">
 
+        <div id="mensajeEmergente">Agregado al carrito</div>
 
         </div>
         <button class="back-load-button"><i class="fa-solid fa-arrow-left-long"></i></button>
@@ -105,6 +104,8 @@
     </div>
 </footer>
 
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="products.js"></script>
 <script src="main.js"></script>
 </body>

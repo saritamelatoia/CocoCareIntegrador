@@ -15,6 +15,8 @@ const cartButton = document.getElementById("go-to-cart-button");
 const toggleMenuBtn = document.getElementById("icon");
 const toggleMenuDisplay = document.getElementById("menu-container");
 
+
+
 // Funcion crear HTML del producto
 const cardTemplate = (product) => {
     return `
@@ -26,6 +28,7 @@ const cardTemplate = (product) => {
     </div>
     `;
 };
+
 
 // Funcion para renderizar productos
 const renderProducts = (productList) => {
@@ -134,6 +137,16 @@ const addToCart = (product) => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
+    Toastify({
+        text: "Se agrego el Producto al Carrito!",
+        className: "info",
+        gravity: "bottom",
+        style: {
+        color: "#333333",
+        background: "#FF8494",
+        },
+        duration: "1000",
+    }).showToast();
     updateCartNumber();
 };
 
@@ -175,7 +188,6 @@ const toggleMenu = (e) => {
 
 }
 
-
 //Función init
 const init = () => {
 renderProducts(appState.products[0]);
@@ -188,6 +200,7 @@ toggleMenuBtn.addEventListener('click', toggleMenu);
 
 updateCartNumber();
 };
+
 
 
 init ();
