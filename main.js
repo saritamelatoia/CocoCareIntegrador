@@ -138,7 +138,7 @@ const addToCart = (product) => {
     cart.push(product);
     localStorage.setItem('cart', JSON.stringify(cart));
     Toastify({
-        text: "Se agrego el Producto al Carrito!",
+        text: "Producto agregado al carrito!",
         className: "info",
         gravity: "bottom",
         style: {
